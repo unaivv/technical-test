@@ -1,4 +1,4 @@
-import { ITask } from "../types";
+import { ITask } from "../TasksList/types";
 
 export interface ITaskProps {
     task: ITask;

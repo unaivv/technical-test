@@ -1,0 +1,10 @@
+.task {
+    display: flex;
+    gap: 5px;
+    
+    .deleteButton{
+        cursor: pointer;
+        color: red;
+        font-weight: bold;
+    }
+}

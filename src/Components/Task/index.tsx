@@ -1,14 +1,12 @@
 
 import React from "react";
 import { ITaskProps } from "./types";
+import styles from './styles.module.css';
 
 const Task = ({ task, toggleTask, deleteTask }: ITaskProps) => {
     return (
         <li
-            style={{
-                display: 'flex',
-                gap: '5px',
-            }}
+            className={styles.task}
             onClick={() => toggleTask(task.id)}
         >
             <input
@@ -27,11 +25,7 @@ const Task = ({ task, toggleTask, deleteTask }: ITaskProps) => {
             </span>
             <span
                 onClick={(e) => deleteTask(task.id, e)}
-                style={{
-                    cursor: 'pointer',
-                    color: 'red',
-                    fontWeight: 'bold'
-                }}
+                className={styles.deleteButton}
             >✕</span>
         </li>
     );

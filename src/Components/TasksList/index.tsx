@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { ITask } from './types';
-import Task from './Task';
+import Task from '../Task';
+
+import styles from './styles.module.css';
 
 const TodoList: React.FC = () => {
 	const [tasks, setTasks] = useState<ITask[]>(() => {
@@ -61,7 +63,7 @@ const TodoList: React.FC = () => {
 	}
 
 	return (
-		<div>
+		<div className={styles.taskList}>
 			<input
 				type="text"
 				value={newTask}
@@ -70,13 +72,7 @@ const TodoList: React.FC = () => {
 				aria-label="New task"
 			/>
 			<button onClick={addTask}>Add Task</button>
-			<ul
-				style={{
-					listStyle: 'none',
-					padding: 0,
-					margin: 0,
-				}}
-			>
+			<ul className={styles.list}>
 				{
 					renderTasks()
 				}
