@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 import styles from './styles.module.css';
-import { ThemeContextProps } from './types';
+import { ThemeContextProps, ThemeProviderProps } from './types';
 
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
@@ -11,10 +11,6 @@ export const useTheme = () => {
     }
     return context;
 };
-
-interface ThemeProviderProps {
-    children: React.ReactNode;
-}
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     const [theme, setTheme] = useState<'light' | 'dark'>(() => {
