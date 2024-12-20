@@ -4,5 +4,5 @@ export interface ThemeContextProps {
 }
 
 export interface ThemeProviderProps {
-    children: React.ReactNode;
+    children: React.ReactNode | React.ReactNode[];
 }
