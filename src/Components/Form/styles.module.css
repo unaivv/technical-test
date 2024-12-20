@@ -1,0 +1,16 @@
+.row{
+    display: flex;
+    margin-bottom: 10px;
+    gap: 10px;
+    & label {
+        min-width: 150px;
+    }
+}
+.registerButton {
+        background-color: #007bff;
+        color: #f8f9fa;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+}
